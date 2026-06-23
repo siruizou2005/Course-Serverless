@@ -22,6 +22,9 @@
 /.wrangler/
 cloudflare-env.d.ts
 
+# source images (originals); optimized assets live in /public
+/pic/
+
 # production
 /build
 

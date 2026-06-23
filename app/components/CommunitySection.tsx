@@ -55,9 +55,15 @@ function PopularCourses() {
 function LatestReviews() {
   return (
     <div>
-      <h2 className="mb-[18px] text-[22px] font-bold tracking-[-0.01em]">
-        最新评价
-      </h2>
+      <div className="mb-[18px] flex items-baseline justify-between">
+        <h2 className="text-[22px] font-bold tracking-[-0.01em]">最新评价</h2>
+        <a
+          href="#"
+          className="text-sm font-medium text-accent transition-opacity hover:opacity-70"
+        >
+          查看更多 →
+        </a>
+      </div>
 
       <div className="rounded-2xl border border-line bg-white px-[22px] py-[2px]">
         {LATEST_REVIEWS.map((review, i) => (
@@ -94,11 +100,11 @@ export default function CommunitySection() {
   return (
     <section
       id="community"
-      className="border-t border-line bg-cream [scroll-margin-top:69px]"
+      className="flex flex-1 items-start border-t border-line bg-cream [scroll-margin-top:69px]"
     >
-      <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-12 px-5 pb-[84px] pt-16 sm:px-8 lg:grid-cols-[1.45fr_1fr] lg:gap-[60px]">
-        <PopularCourses />
+      <div className="mx-auto grid w-full max-w-[1200px] grid-cols-1 gap-12 px-5 pb-14 pt-10 sm:px-8 lg:grid-cols-[1.45fr_1fr] lg:gap-[60px]">
         <LatestReviews />
+        <PopularCourses />
       </div>
     </section>
   );

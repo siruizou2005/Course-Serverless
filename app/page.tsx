@@ -8,8 +8,11 @@ export default function Home() {
     <div className="min-h-screen w-full bg-paper">
       <Header />
       <Hero />
-      <CommunitySection />
-      <Footer />
+      {/* Community + footer together fill exactly one screen below the hero */}
+      <div className="flex min-h-[calc(100vh-69px)] flex-col">
+        <CommunitySection />
+        <Footer />
+      </div>
     </div>
   );
 }

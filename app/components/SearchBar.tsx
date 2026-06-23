@@ -21,7 +21,7 @@ export default function SearchBar() {
   const [tab, setTab] = useState<TabKey>("course");
 
   return (
-    <div className="mx-auto mt-[30px] max-w-[720px]">
+    <div className="mx-auto mt-[30px] w-full max-w-[800px]">
       <div className="flex justify-center gap-2">
         {TABS.map((t) => {
           const active = tab === t.key;
