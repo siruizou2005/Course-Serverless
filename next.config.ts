@@ -5,3 +5,8 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
+// Cloudflare (OpenNext): wire up the dev-time platform proxy so `next dev`
+// can access Cloudflare bindings. No-op in production builds.
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
+initOpenNextCloudflareForDev();
