@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* Runtime-themeable accent (mirrors the design's `accent` prop). Default = ink. */
+:root {
+  --accent: #131311;
+}
+
+@theme inline {
+  --color-accent: var(--accent);
+}
+
+@theme {
+  --font-sans: var(--font-space), var(--font-noto), system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+
+  /* Editorial neutral palette pulled from the prototype */
+  --color-ink: #131311;
+  --color-paper: #ffffff;
+  --color-cream: #f6f5f1;
+
+  --color-line: #e7e6e1;
+  --color-line-soft: #eeede8;
+  --color-line-strong: #d8d7d1;
+  --color-chip: #e0dfd9;
+
+  --color-muted: #6e6e68;
+  --color-faint: #9a9a92;
+  --color-ghost: #b4b4ac;
+}
+
+@layer base {
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  input::placeholder {
+    color: var(--color-faint);
+  }
+
+  ::selection {
+    background: #131311;
+    color: #fff;
+  }
+}
